@@ -1,4 +1,4 @@
-package com.targettrust.core;
+package com.core;
 
 import java.io.*;
 
