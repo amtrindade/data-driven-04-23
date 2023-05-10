@@ -21,7 +21,8 @@ public class DriverFactory {
 			
 			if (browser.equals("chrome")) {					
 				System.setProperty("webdriver.chrome.driver", path + "chromedriver");
-				driver = new ChromeDriver();				
+				driver = new ChromeDriver();
+				driver.manage().window().maximize();
 			}
 			
 			else if (browser.equals("chrome-headless")){
@@ -46,6 +47,7 @@ public class DriverFactory {
 			else {
 				System.setProperty("webdriver.geckodriver.driver", path + "geckodriver");				
 				driver = new FirefoxDriver();
+				driver.manage().window().maximize();
 			}			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		}					
